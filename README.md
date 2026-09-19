@@ -41,7 +41,8 @@ Solar-Panel-Degradation-Predictor/
 ├── index.html
 └── README.md
 
+
+
 ## Author
 
 Renuka Geddam
-
