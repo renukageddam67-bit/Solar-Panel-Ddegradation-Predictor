@@ -41,7 +41,7 @@ Solar-Panel-Degradation-Predictor/
 ├── index.html
 └── README.md
 
-
+```text
 
 ## Author
 
