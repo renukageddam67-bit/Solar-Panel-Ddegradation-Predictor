@@ -35,13 +35,14 @@ Estimated Capacity = Initial Capacity × (1 − Degradation Rate / 100) ^ Years
 
 ## Project Structure
 
-```text
 Solar-Panel-Degradation-Predictor/
 │
 ├── index.html
 └── README.md
 
-```text
+## Project Purpose
+
+This project demonstrates the use of HTML, CSS, and JavaScript to create an interactive web application for estimating solar panel capacity degradation over time.
 
 ## Author
 
