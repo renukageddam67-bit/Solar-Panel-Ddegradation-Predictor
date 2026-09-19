@@ -40,11 +40,3 @@ Solar-Panel-Degradation-Predictor/
 │
 ├── index.html
 └── README.md
-
-Project Purpose
-
-This project demonstrates the use of HTML, CSS, and JavaScript to create an interactive web application for estimating solar panel capacity degradation over time.
-
-Author
-
-Geddam Renuka
