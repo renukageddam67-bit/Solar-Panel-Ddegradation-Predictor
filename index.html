@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar Panel Degradation Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f4f8;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+    }
+    label, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Solar Panel Degradation Predictor</h2>
+    <label for="initial">Initial Capacity (Watts):</label>
+    <input type="number" id="initial" placeholder="e.g. 300" />
+
+    <label for="rate">Degradation Rate (% per year):</label>
+    <input type="number" id="rate" placeholder="e.g. 0.8" />
+
+    <label for="years">Years:</label>
+    <input type="number" id="years" placeholder="e.g. 25" />
+
+    <button onclick="predictDegradation()">Predict</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function predictDegradation() {
+      const initial = parseFloat(document.getElementById('initial').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+      const years = parseInt(document.getElementById('years').value);
+
+      if (isNaN(initial) || isNaN(rate) || isNaN(years)) {
+        document.getElementById('result').textContent = "Please enter valid values.";
+        return;
+      }
+
+      const finalCapacity = initial * Math.pow((1 - rate / 100), years);
+      document.getElementById('result').textContent = 
+        `Estimated Capacity After ${years} Years: ${finalCapacity.toFixed(2)} Watts`;
+    }
+  </script>
+</body>
+</html>
